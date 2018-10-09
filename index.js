@@ -23,7 +23,7 @@ var theFunk = "Funky!"
 var funkyFunction = function() {
     return function() { 
     var theFunk = funkyFunction
-    return theFunk
+    return theFunk.string
   }
 }
 
