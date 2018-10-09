@@ -20,11 +20,23 @@ function add2(n) {
  
 }
 
-var funkyFunction = function() {
+var funkyFunction = function(`FUNKY!`) {
     return function() {
   var theFunk = funkyFunction
     theFunk = "FUNKY!"
     return "FUNKY!"
+   
+   describe('funkyFunction()', function() {
+    it('returns a function', function() {
+      expect(typeof window.funkyFunction()).toEqual('function')
+    })
+  })
+
+  describe('theFunk', function() {
+    it('is "FUNKY!"', function() {
+      expect(window.theFunk).toEqual('FUNKY!')
+    })
+  })
    
   }
 }
